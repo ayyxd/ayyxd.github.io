@@ -1,0 +1,170 @@
+/* CSS Document */
+
+body
+{
+	background-image:url("http://i.dailymail.co.uk/i/pix/2015/12/10/20/2F3FE7C000000578-3354970-When_the_winners_of_the_Nobel_Prizes_in_literature_and_sciences_-a-92_1449777933799.jpg");
+	background-size:cover;
+	padding:0;
+	margin:0;
+}
+
+#back
+{
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+
+header
+{
+	background-color:#D1873D;
+	width:100%;
+	height:9.25%;
+	padding-top:1.5%;
+	
+	text-align:center;
+	color:#FADC74;
+	font-size:48px;
+	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
+}
+
+#feature-sidenav
+{
+	background-color:#D6D3C5;
+	width:22%;
+	height:100%;
+	float:left;
+}
+
+#feature-sidenav-window
+{
+	background-color:#A39987;
+	width:70%;
+	height:3%;
+	margin-top:12%;
+	margin-left:8%;
+	padding:5%;
+	transition:width 500ms;
+}
+
+#feature-sidenav-window:hover
+{
+	width:75%;
+	transition:width 200ms;
+}
+
+#feature-sidenav-window-selected
+{
+	background-color:#B85E43;
+	width:70%;
+	height:3%;
+	margin-top:12%;
+	margin-left:8%;
+	padding:5%;
+}
+
+#feature-article
+{
+	width:78%;
+	height:100%;
+	float:right;
+}
+
+#feature-article-info
+{
+	background-color:#FFF;
+	width:60%;
+	height:90%;
+	
+	margin-top:1%;
+	margin-left:1%;
+	padding:2%;
+	float:left;
+	
+	text-align:justify;
+	font-size:18px;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	color:#716451;
+	opacity:1;
+}
+
+#feature-article-image
+{
+	height:42.5%;
+	width:20%;
+	margin-top:5%;
+	margin-left:7.5%;
+	float:left;
+}
+
+#page
+{
+	background-color:#F1F1EF;
+	width:100%;
+	height:88%;
+	opacity:0.85;
+}
+
+#home-top
+{
+	background-color:#F1E9E0;
+	width:100%;
+	height:50%;
+}
+
+#home-top-image
+{
+	margin-left:20%;
+	margin-top:3%;
+	float:left;
+	opacity:1;
+}
+
+#home-top-aside
+{
+	width:35%;
+	height:80%;
+	margin-right:25%;
+	margin-top:2.25%;
+	float:right;
+	
+	font-size:18px;
+	font-family:Arial, Helvetica, sans-serif;
+	color:#716451;
+	opacity:1;
+}
+
+#home-bottom
+{
+	width:100%;
+	height:50%;
+}
+
+#home-bottom-window
+{
+	width:25%;
+	height:75%;
+	margin-top:3%;
+	float:left;
+	
+	text-align:center;
+	color:#A8A8A8;
+	font-size:36px;
+	font-family:Verdana, Geneva, sans-serif;
+	opacity:1;
+}
+
+footer
+{
+	background-color:#F1F1EF;
+	width:100%;
+	padding:1%;
+}
+
+#circle
+{
+	padding:5%;
+	height:75%;
+	width:50%;
+	border-radius:50%;
+}
