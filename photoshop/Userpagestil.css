@@ -1,0 +1,150 @@
+@charset "utf-8";
+
+body
+{
+	background-image:url("https://wallpaperscraft.com/image/mountains_birds_trees_clouds_fog_tops_9752_3840x2400.jpg");
+	background-size:cover;
+	
+	padding:0;
+	margin:0;
+}
+
+#back
+{
+	background-color:rgba(0,0,0,0.6);
+	width:100%;
+	height:100%;
+	position:absolute;
+}
+
+#top
+{
+	background-color:rgba(255,255,255,0.8);
+	width:75%;
+	height:22%;
+	
+	margin-left:10%;
+	margin-top:1%;
+}
+
+#front
+{
+	background-color:rgba(255,255,255,0.8);
+	width:75%;
+	height:72%;
+	
+	margin-left:10%;
+	margin-top:1%;
+	padding-top:0.01%;
+}
+
+#banner
+{
+	width:75%;
+	height:100%;
+	
+	margin-left:11.25%;
+}
+
+#mid
+{
+	text-align:center;
+	font-size:400%;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	
+	width:75%;
+	height:50%;
+	
+	margin-left:10%;
+}
+
+a
+{
+	text-decoration:none;
+}
+
+#alert
+{
+	background-color:rgba(240,170,120,1);
+	width:97.5%;
+	height:28%;
+	
+	padding-top:2.5%;
+	margin-left:2%;
+	margin-top:4%;
+	
+	font-size:75%;
+	color:#FFF0D2;
+	
+	transition: width 1s;
+}
+
+#alert:hover
+{
+	width:100%;
+}
+
+#container
+{
+	width:auto;
+	height:auto;
+}
+
+#image1
+{
+	float:left;
+	margin-top:-1%;
+	margin-left:12.5%;
+	width:50%;
+	height:50%;
+}
+
+#image2
+{
+	float:left;
+	margin-top:5%;
+	margin-left:7.75%;
+	width:60%;
+	height:60%;
+}
+
+#arrowright
+{
+	background-color:rgba(255,255,255,0.8);
+	float:right;
+	height:90%;
+	width:10%;
+	margin-right:2%;
+	margin-top:2.5%;
+	transition: height 1s;
+}
+
+#arrowright:hover
+{
+	height:92.5%;
+}
+
+#arrowleft
+{
+	background-color:rgba(255,255,255,0.8);
+	float:left;
+	height:90%;
+	width:10%;
+	margin-left:2%;
+	margin-top:2.5%;
+	transition: height 1s;
+}
+
+#arrowleft:hover
+{
+	height:92.5%;
+}
+
+#arrowcontainer
+{
+	margin-top:200%;
+	text-align:center;
+	font-size:200%;
+	font-family:Tahoma, Geneva, sans-serif;
+	color:#FFF;
+}
