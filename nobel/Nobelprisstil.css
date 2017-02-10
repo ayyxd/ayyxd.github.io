@@ -36,7 +36,7 @@ header
 	float:left;
 }
 
-#feature-sidenav-window
+div.feature-sidenav-window
 {
 	background-color:#A39987;
 	width:70%;
