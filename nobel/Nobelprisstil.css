@@ -47,13 +47,13 @@ div.feature-sidenav-window
 	transition:width 500ms;
 }
 
-#feature-sidenav-window:hover
+div.feature-sidenav-window:hover
 {
 	width:75%;
 	transition:width 200ms;
 }
 
-#feature-sidenav-window-selected
+div.feature-sidenav-window-selected
 {
 	background-color:#B85E43;
 	width:70%;
