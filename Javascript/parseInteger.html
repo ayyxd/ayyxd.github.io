@@ -3,7 +3,7 @@
 <head>
 	<meta charset="utf-8">
 	<title>parseInteger</title>
-    <!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
+    <script src="https://code.jquery.com/jquery-1.10.2.js"></script>
 </head>
 
 <body>
@@ -14,11 +14,13 @@
 	function IsNumber()
 	{
 		var input = document.getElementById("number").value;
+		$("#text").fadeOut(0);
+  		$("#text").fadeIn("slow");
 		document.getElementById("text").innerHTML =
-			"regexParse(\"" + input + "\") = " + regexParse(input) + "<br/>" +
+			"RegexParse(\"" + input + "\") = " + RegexParse(input) + "<br/>" +
 			"parseInt(\"" + input + "\") = " + parseInt(input);
 	}
-	function regexParse(value)
+	function RegexParse(value)
 	{
 		var number = "";
 		if(value.match(/[\d+]/g))
