@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>parseInteger</title>
+    <!--<script src="https://code.jquery.com/jquery-1.10.2.js"></script>-->
+</head>
+
+<body>
+	<input type="search" id="number" onChange="IsNumber()">
+	<p id="text"></p>
+    
+	<script>
+	function IsNumber()
+	{
+		var input = document.getElementById("number").value;
+		document.getElementById("text").innerHTML =
+			"regexParse(\"" + input + "\") = " + regexParse(input) + "<br/>" +
+			"parseInt(\"" + input + "\") = " + parseInt(input);
+	}
+	function regexParse(value)
+	{
+		var number = "";
+		if(value.match(/[\d+]/g))
+			for(var i = 0; i < value.match(/[\d+]/g).length; i++)
+				number += value.match(/[\d+]/g)[i];
+		else
+			return "NaN";
+		return number;
+	}
+	</script>
+</body>
+</html>
