@@ -7,6 +7,9 @@ var cursory = 0.5;
 var posx = cursorx;
 var posy = cursory;
 
+var isTouch =  !!("ontouchstart" in window) || window.navigator.msMaxTouchPoints > 0;
+alert(isTouch);
+
 var olowLeft = new Array();
 var olowTop = new Array();
 var olowWidth = new Array();
