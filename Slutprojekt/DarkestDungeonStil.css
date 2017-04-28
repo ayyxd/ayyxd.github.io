@@ -5,13 +5,14 @@ body
 	background-color:#000;
 	padding:0;
 	margin:0;
-	overflow:hidden;
 }
 
 #back
 {
 	width:100%;
 	height:100%;
+	overflow:hidden;
+	position:fixed;
 }
 
 section
@@ -25,23 +26,26 @@ nav
 	height:65%;
 }
 
+#chartext
+{
+	position:relative;
+}
+
 .character
 {
 	width:100%;
 	height:20%;
-	margin-bottom:4%;
 	
 	color:white;
 	font-size:200%;
 	font-family:"Trebuchet MS", Arial, Helvetica, sans-serif;
 	text-align:center;
-	
-	transition:margin-left 0.6s;
 }
 
-.character:hover
+.character_name
 {
-	margin-left:3%;
+	position:relative;
+	opacity:0;
 }
 
 #c_crusader
@@ -56,6 +60,18 @@ nav
 	background-size:cover;
 }
 
+#c_occultist
+{
+	background:url(c_occultist.jpg);
+	background-size:cover;
+}
+
+#c_highwayman
+{
+	background:url(c_highwayman.jpg);
+	background-size:cover;
+}
+
 #imgcenter
 {
 	position:absolute;
@@ -64,7 +80,12 @@ nav
 
 #title
 {
-	top:5%;
+	position:absolute;
+}
+
+#subtitle
+{
+	position:absolute;
 }
 
 #info
@@ -109,4 +130,18 @@ nav
 .parallaxhigh
 {
 	position:absolute;
+}
+
+.character
+{
+	width:100%;
+	height:22%;
+	margin-bottom:1%;
+	
+	transition:margin-left 0.6s;
+}
+
+.character:hover
+{
+	margin-left:3%;
 }
