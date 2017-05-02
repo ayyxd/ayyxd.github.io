@@ -21,7 +21,7 @@ var iter = owidth;
 var ms = 0;
 var delay = 1500;
 
-$(window).load(function()
+$(window).one('load', function()
 {
 	owidth = document.getElementById("background1").width;
 	oheight = document.getElementById("background1").height;
@@ -35,6 +35,10 @@ $(window).load(function()
 	{
 		$(sprites.item(i)).fadeOut(0).delay(delay).fadeIn(delay).delay(delay);
 	}
+}).each(function()
+{
+	if(this.complete)
+		$(this).load();
 });
 if(!isTouch)
 {
@@ -98,6 +102,9 @@ $(".character").css('margin-bottom', nratio * oheight * 4);
 
 var characternames = document.getElementsByClassName("character_name");
 var characters = document.getElementsByClassName("character");
+
+var swapping = false;
+var swapleft = 0;
 
 function Passive()
 {
@@ -230,9 +237,29 @@ function Passive()
 	$("#info").css('left', $(window).width() - $(window).width() * 0.25 + (posx * owidth * 0.015) - (1 - $(window).width() / owidth) * 0.1 * owidth);
 	$("#info").css('top', $(window).height() - $(window).height() * 0.15 + (posy * oheight * 0.015) - $("#info").height() + (1 - $(window).width() / owidth) * 0.075 * oheight);
 	
+	if(swapping || swapleft > 0)
+	{
+		swapleft = 1 - swapleft;
+		$("#back").css('left', swapleft * $(window).width());
+	}
+	
 	setTimeout(function()
 	{
 		ms++;
 		Passive();
 	}, 1);
+}
+
+document.getElementById("c_crusader").onclick = function()
+{
+	Swap();
+	setTimeout(function()
+	{
+		
+	}, 1000);
+}
+
+function Swap()
+{
+	swapping = true;
 }
