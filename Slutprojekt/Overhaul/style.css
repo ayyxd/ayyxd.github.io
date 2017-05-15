@@ -1,0 +1,118 @@
+@charset "utf-8";
+/* CSS Document */
+
+body
+{
+	background-color:rgba(0,0,0,1);
+	margin:0;
+	padding:0;
+}
+
+#back
+{
+	background-color:rgba(255,0,0,0.05);
+	position:absolute;
+	width:100%;
+	height:100%;
+}
+
+#title
+{
+	padding-top:2%;
+}
+
+#titlebg
+{
+	position:absolute;
+	z-index:-1;
+}
+
+.fit
+{
+	max-width:100%;
+	max-height:auto;
+}
+
+.center
+{
+	display:block;
+	margin:auto;
+	width:auto;
+}
+
+article
+{
+	padding:12%;
+	padding-bottom:6%;
+}
+
+section
+{
+	margin-bottom:3%;
+}
+
+.node
+{
+	color:white;
+	font-size:300%;
+	font-family:Gotham, Helvetica Neue, Helvetica, Arial," sans-serif";
+}
+
+nav
+{
+	padding:6%;
+}
+
+#crusader
+{
+	background-image:url(crusaderbg.jpg);
+}
+
+#plaugedoctor
+{
+	background-image:url(plaugedoctorbg.jpg);
+}
+
+#occultist
+{
+	background-image:url(occultistbg.jpg);
+}
+
+#highwayman
+{
+	background-image:url(highwaymanbg.jpg);
+}
+
+.character
+{
+	padding:10%;
+	margin-bottom:6%;
+	text-align:center;
+	
+	color:white;
+	font-size:300%;
+	font-family:Gotham, Helvetica Neue, Helvetica, Arial," sans-serif";
+	
+	background-repeat:no-repeat;
+	background-size:cover;
+}
+
+.clickable
+{
+	cursor:pointer;
+}
+
+.nocursor
+{
+	cursor:default;
+}
+
+.noevent
+{
+	pointer-events:none;
+}
+
+.noselect
+{
+	user-select:none;
+}
