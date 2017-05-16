@@ -58,6 +58,11 @@ section
 	font-family:Gotham, Helvetica Neue, Helvetica, Arial," sans-serif";
 }
 
+.nodetext
+{
+	font-size:50%;
+}
+
 nav
 {
 	padding:6%;
