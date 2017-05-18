@@ -1,14 +1,21 @@
 // JavaScript Document
 
 // Font Size
-var val = Math.pow($(window).width() / 1920, 0.3);
-$("#back").css("font-size", (val * 100) + "%").css("line-height", ((val * 100) + 150) + "%");
+size();
 $(window).resize(
 	function()
 	{
-		val = Math.pow($(window).width() / 1920, 0.3);
-		$("#back").css("font-size", (val * 100) + "%").css("line-height", ((val * 100) + 150) + "%");
+		size();
 	});
+function size()
+{
+	var val;
+	if($(window).width() > 980)
+		val = Math.pow($(window).width() / 1920, 0.3);
+	else
+		val = Math.pow($(window).width() / 1200, 0.3);
+	$("#back").css("font-size", (val * 100) + "%").css("line-height", ((val * 100) + 150) + "%");
+}
 
 // Node Text
 $("#nodetext1").hide();

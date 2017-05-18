@@ -13,6 +13,7 @@ body
 	padding:0;
 	
 	font-family:'Inknut Antiqua', serif;
+	font-size:16px;
 }
 
 #back
@@ -27,13 +28,13 @@ body
 {
 	float:right;
 	width:70%;
-	min-height:100%;
 }
 
 #side
 {
 	float:left;
 	width:30%;
+	min-height:100%;
 }
 
 #title
