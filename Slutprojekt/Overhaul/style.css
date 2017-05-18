@@ -3,7 +3,7 @@
 
 html
 {
-	overflow-x:hidden;
+	//overflow-x:hidden;
 }
 
 body
@@ -16,7 +16,7 @@ body
 	font-size:16px;
 }
 
-#back
+.back
 {
 	background-color:rgba(255,0,0,0.05);
 	position:absolute;
@@ -24,7 +24,7 @@ body
 	height:100%;
 }
 
-#front
+.front
 {
 	float:right;
 	width:70%;
@@ -32,7 +32,7 @@ body
 
 #side
 {
-	float:left;
+	position:absolute;
 	width:30%;
 	min-height:100%;
 }
@@ -201,6 +201,40 @@ footer
 	font-size:1.25em;
 }
 
+.char-front
+{
+	float:left;
+	width:70%;
+}
+
+.charbg
+{
+	position:absolute;
+	z-index:-1;
+	width:70%;
+	float:left;
+}
+
+#page-crusader
+{
+	left:-100%;
+}
+
+#page-plaugedoctor
+{
+	left:-200%;
+}
+
+#page-occultist
+{
+	left:-300%;
+}
+
+#page-highwayman
+{
+	left:-400%;
+}
+
 @media screen and (max-width: 980px)
 {
 	body
@@ -208,13 +242,13 @@ footer
 		font-size:0.8em;
 	}
 	
-	#front
+	.front
 	{
 		float:none;
 		width:100%;
 	}
 
-	#side
+	.side
 	{
 		float:none;
 		width:100%;
