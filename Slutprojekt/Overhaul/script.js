@@ -53,16 +53,9 @@ function Passive()
 	
 	if(scrollUp > 0)
 	{
-		if(window.scrollY === scrollUp)
-		{
-			scrollUp = Math.round(scrollUp * 0.96);
-			scrollUp -= 1;
-			window.scrollTo(window.scrollX, scrollUp);
-		}
-		else
-		{
-			scrollUp = 0;
-		}
+		scrollUp = Math.round(scrollUp * 0.96);
+		scrollUp -= 1;
+		window.scrollTo(window.scrollX, scrollUp);
 	}
 	
 	setTimeout(function()
