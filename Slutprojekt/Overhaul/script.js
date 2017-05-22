@@ -2,6 +2,7 @@
 
 // Variables
 var sw = 0;
+var scrollUp = 0;
 var mobile = $(".front").css("float") === "none";
 
 // Font Size
@@ -30,13 +31,14 @@ Passive();
 function Passive()
 {
 	var backs = document.getElementsByClassName("back");
-	if(!$(".back").is(":animated") || parseFloat($("footer").css("top")) < backs.item(sw).scrollHeight + (mobile ? $("#side").height() : 0))
+	if(!$(".back").is(":animated"))
 	{
-		$("footer").css("top", backs.item(sw).scrollHeight + (mobile ? $("#side").height() : 0));
+		var scrollh = backs.item(sw).scrollHeight > $("nav").get(0).scrollHeight ? backs.item(sw).scrollHeight : $("nav").get(0).scrollHeight;
+		$("footer").css("top", scrollh + $("footer").height() + (mobile ? $("#side").height() : 0));
 		
 		if(mobile)
 		{
-			$("#side").css("top", backs.item(sw).scrollHeight - $("footer").height());
+			$("#side").css("top", scrollh - $("footer").height());
 			$("#side").css("left", 0);
 		}
 		else
@@ -49,6 +51,20 @@ function Passive()
 		}
 	}
 	
+	if(scrollUp > 0)
+	{
+		if(window.scrollY === scrollUp)
+		{
+			scrollUp = Math.round(scrollUp * 0.96);
+			scrollUp -= 1;
+			window.scrollTo(window.scrollX, scrollUp);
+		}
+		else
+		{
+			scrollUp = 0;
+		}
+	}
+	
 	setTimeout(function()
 	{
 		Passive();
@@ -56,7 +72,24 @@ function Passive()
 }
 
 // Node Text
-$("#nodetext1").hide();
+$(".nodetext").hide();
+var nodetitles = document.getElementsByClassName("nodetitle");
+var nodetexts = document.getElementsByClassName("nodetext");
+
+for(var i = 0; i < nodetitles.length; i++)
+{
+	BindNode(i);
+}
+
+function BindNode(i)
+{
+	$(nodetitles.item(i)).click(function()
+	{
+		$(nodetexts.item(i)).slideToggle(600);
+	});
+}
+
+/*$("#nodetext1").hide();
 $("#nodetext2").hide();
 $("#nodetext3").hide();
 
@@ -71,7 +104,7 @@ $("#node2").click(function()
 $("#node3").click(function()
 	{
 		$("#nodetext3").slideToggle(600);
-	}); // todo make this thing dynamic so you can add more characters or whatnot
+	}); // todo make this thing dynamic so you can add more characters or whatnot*/
 
 // Characters
 $("#crusader").click(
@@ -108,7 +141,7 @@ function Switch(i)
 		sw = i;
 		
 		// Scroll Up
-		window.scrollTo(window.scrollX, 0);
+		scrollUp = window.scrollY;
 		
 		// Page Transition
 		var offset = parseFloat($(backs.item(i)).css("left")) / $(window).width() * 100;
