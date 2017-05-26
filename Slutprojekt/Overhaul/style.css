@@ -15,6 +15,13 @@ body
 	font-family:'Inknut Antiqua', serif;
 	font-size:16px;
 	color:white;
+	
+	-webkit-transform: translate3d(0,0,0);
+}
+
+header
+{
+	position:relative;
 }
 
 .back
@@ -51,7 +58,6 @@ body
 .fit
 {
 	max-width:100%;
-	max-height:auto;
 }
 
 .center
@@ -219,7 +225,6 @@ footer
 {
 	position:absolute;
 	z-index:-1;
-	width:70%;
 	float:left;
 }
 
@@ -241,6 +246,56 @@ footer
 #page-highwayman
 {
 	left:-400%;
+}
+
+.item
+{
+	padding:2%;
+	margin:6%;
+}
+
+.itemimg
+{
+	float:left;
+	width:25%;
+	max-width:125px;
+}
+
+.itemimg-vertical
+{
+	float:left;
+	width:25%;
+	max-width:100px;
+}
+
+.itemtitle
+{
+	font-size:1.2em;
+	display:block;
+	padding-bottom:4%;
+	color:white;
+}
+
+.itemtext
+{
+	width:72%;
+	float:right;
+	text-align:center;
+	padding:1%;
+}
+
+.nodesubtitle
+{
+	text-align:center;
+	color:white;
+	font-size:1.5em;
+	padding-top:4%;
+	padding-bottom:2%;
+}
+
+.clearer
+{
+	clear:both;
 }
 
 @media screen and (max-width: 980px)

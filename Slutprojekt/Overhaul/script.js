@@ -4,6 +4,11 @@
 var sw = 0;
 var scrollUp = 0;
 var mobile = $(".front").css("float") === "none";
+var touch = 'ontouchstart' in window || navigator.msMaxTouchPoints;
+var posx = $(window).width() / 2;
+var posy = $(window).height() / 2;
+var cursorx = $(window).width() / 2;
+var cursory = $(window).height() / 2;
 
 // Font Size
 Size();
@@ -27,13 +32,46 @@ function Size()
 	$(".back").css("font-size", (val * 100) + "%").css("line-height", ((val * 100) + 150) + "%");
 }
 
+$(document).ready(function ()
+{
+	if(!touch)
+	{
+		$(window).mousemove(function (e)
+		{
+			cursorx = e.pageX;
+			cursory = e.pageY;
+		});
+	}
+});
+
+function parallax(target, layer)
+{
+    var distance = 10 / layer;
+		
+    var x = ($(window).width() - target.offsetWidth) / 2 - (posx - ($(window).width() / 2)) / distance;
+    var y = ($(window).height() - target.offsetHeight) / 2 - (posy - ($(window).height() / 2)) / distance - $(window).height() / 2;
+    $(target).offset(
+	{
+		top:y,
+		left:x
+	});
+}
+
 Passive();
 function Passive()
 {
+	posx += (cursorx - posx) * 0.1;
+	posy += (cursory - posy) * 0.1;
+	parallax(document.getElementById("layer1"), 0.15);
+	/*for(var i = 0; i < document.getElementsByClassName("layerbg").length; i++)
+	{
+		parallax(document.getElementsByClassName("layerbg")[i], 0.1);
+	}*/
+	
 	var backs = document.getElementsByClassName("back");
 	if(!$(".back").is(":animated"))
 	{
-		var scrollh = backs.item(sw).scrollHeight > $("nav").get(0).scrollHeight ? backs.item(sw).scrollHeight : $("nav").get(0).scrollHeight;
+		var scrollh = backs.item(sw).scrollHeight > $("nav").get(0).scrollHeight + 100 ? backs.item(sw).scrollHeight :  $("nav").get(0).scrollHeight + 100;
 		$("footer").css("top", scrollh + $("footer").height() + (mobile ? $("#side").height() : 0));
 		
 		if(mobile)
