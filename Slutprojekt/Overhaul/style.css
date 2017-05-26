@@ -3,7 +3,7 @@
 
 html
 {
-	
+	overflow-x:hidden;
 }
 
 body
@@ -16,7 +16,6 @@ body
 	font-size:16px;
 	color:white;
 	
-	overflow-x:hidden;
 	-webkit-transform: translate3d(0,0,0);
 }
 
