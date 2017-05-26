@@ -71,7 +71,7 @@ function Passive()
 	var backs = document.getElementsByClassName("back");
 	if(!$(".back").is(":animated"))
 	{
-		var scrollh = backs.item(sw).scrollHeight > $("nav").get(0).scrollHeight + 100 ? backs.item(sw).scrollHeight :  $("nav").get(0).scrollHeight + 100;
+		var scrollh = (backs.item(sw).scrollHeight > $("nav").get(0).scrollHeight + 100 ? backs.item(sw).scrollHeight :  $("nav").get(0).scrollHeight + 100) + 50 + (touch ? 150 : 0);
 		$("footer").css("top", scrollh + $("footer").height() + (mobile ? $("#side").height() : 0));
 		
 		if(mobile)
