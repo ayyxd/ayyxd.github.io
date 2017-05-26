@@ -302,13 +302,23 @@ footer
 {
 	body
 	{
-		font-size:0.8em;
+		font-size:0.75em;
+	}
+	
+	.back
+	{
+		margin-bottom:6%;
 	}
 	
 	.front
 	{
 		float:none;
 		width:100%;
+	}
+	
+	.nodetitle
+	{
+		font-size:2.5em;
 	}
 	
 	.char-front
